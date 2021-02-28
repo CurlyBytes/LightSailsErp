@@ -1,4 +1,5 @@
 ﻿using SharedKernel.Events;
+using SharedKernel.Rules;
 using System;
 using System.Collections.Generic;
 using System.Text;
