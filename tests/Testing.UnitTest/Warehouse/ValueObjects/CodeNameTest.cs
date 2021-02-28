@@ -14,6 +14,7 @@ namespace Testing.UnitTest.Warehouse.ValueObjects
         {
                 new object[] { "ss???" },
                 new object[] { "C-!" },
+                new object[] { "22222222C-!cccccccccc" }
         };
         public static IEnumerable<object[]> CorrectData =>
         new List<object[]>
@@ -47,7 +48,7 @@ namespace Testing.UnitTest.Warehouse.ValueObjects
             });
 
             //Assert
-            Assert.Contains("Invalid CodeName Structure.", exception.Message);
+            Assert.Contains("Input code was not in required format", exception.Message);
         }
 
         [Fact]

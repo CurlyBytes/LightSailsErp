@@ -12,14 +12,17 @@ namespace Domain.Warehouse.ValueObjects
 
         public CodeName(string code)
         {
-            
+            string regexPattern = @"\b\w*[-']\w*\b";
             Guard.Against.NullOrEmpty(code, nameof(code));
             Guard.Against.NullOrWhiteSpace(code, nameof(code));
-            Guard.Against.CodeNameRegex(code, nameof(code));
-           
+            Guard.Against.InvalidFormat(code, nameof(code), regexPattern);
+            Guard.Against.InvalidInput(code, nameof(code), CannotMoreThanTenCharacter);
+
+
             Code = code ?? throw new ArgumentNullException(nameof(code));
 
         }
+        public bool CannotMoreThanTenCharacter(string tests) => tests.Length <= 10;
 
         public override string ToString()
         {

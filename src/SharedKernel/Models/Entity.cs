@@ -11,6 +11,7 @@ namespace SharedKernel.Models
     /// </summary>
     public abstract class Entity
     {
+   
         private List<IDomainEvent> _domainEvents;
 
         /// <summary>

@@ -7,6 +7,13 @@ namespace SharedKernel.Models
     public abstract class TypedIdValueBase : IEquatable<TypedIdValueBase>
     {
         public Guid Value { get; }
+        // public string CreatedBy { get; set; }
+
+        public DateTime Created { get; private set; } = SystemClock.Now;
+
+        //public string LastModifiedBy { get; set; }
+
+        public DateTime? LastModified { get; set; } = SystemClock.Now;
 
         protected TypedIdValueBase(Guid value)
         {
