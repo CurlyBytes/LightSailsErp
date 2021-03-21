@@ -1,6 +1,6 @@
-﻿using Domain.Warehouse.ValueObjects;
+﻿using Domain.WarehouseContext.ValueObjects;
 
-namespace Domain.Warehouse.Rules
+namespace Domain.WarehouseContext.Rules
 {
     public interface ICodeNameCheckerUniqueness
     {

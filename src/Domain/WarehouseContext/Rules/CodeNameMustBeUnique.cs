@@ -1,10 +1,10 @@
-﻿using Domain.Warehouse.ValueObjects;
+﻿using Domain.WarehouseContext.ValueObjects;
 using SharedKernel.Rules;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Domain.Warehouse.Rules
+namespace Domain.WarehouseContext.Rules
 {
     public class CodeNameMustBeUnique : IBusinessRule
     {
@@ -21,6 +21,9 @@ namespace Domain.Warehouse.Rules
        
         public string Message => "Warehouse with this Codename already exists.";
 
-        public bool IsBroken() => !_iCodeNameCheckerUniqueness.IsUnique(_codeName);
+        public bool IsBroken()
+        {
+            return !_iCodeNameCheckerUniqueness.IsUnique(_codeName);
+        }
     }
 }

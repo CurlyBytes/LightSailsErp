@@ -1,5 +1,5 @@
 ﻿using AutoFixture;
-using Domain.Warehouse.ValueObjects;
+using Domain.WarehouseContext.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;

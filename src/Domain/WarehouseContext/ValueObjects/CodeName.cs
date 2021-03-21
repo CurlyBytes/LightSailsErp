@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Domain.Warehouse.ValueObjects
+namespace Domain.WarehouseContext.ValueObjects
 {
     public class CodeName : ValueObject
     {
